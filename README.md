@@ -26,6 +26,11 @@ The buttons A, B, X, Y can do some actions:
 ## Some insides
 Where is the framebuffer? There is no framebuffer, instead each scanline is produced and sent to to the LCD controller. The transfer is done using the DMA so while sending the current scanline the next one can be prepared by the CPU. In case the CPU finishes earlier than the DMA then it will wait till the DMA is ready.
 
+## How to test it
+If you have already got the hardware you can test it building it or just flashing one of the uf2 files inside the bin folder:
+* ``main.uf2``: It is permanent, save it to flash.
+* ``main_noflash.uf2``: It is saved to RAM and it will alive while the board is power.
+
 ## How to generate the Doom's logo sprite.
 It is already generated and stored inside the media folder repo but in case you want to change it, execute the python script inside the doc folder:
  ````
